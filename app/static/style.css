@@ -1,0 +1,142 @@
+/* Google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+  background-color: #c4e5ff;
+  /* padding: 0; */
+  /* margin: 0; */
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  padding: 0;
+  margin: 1rem;
+}
+
+.file-container {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 1rem;
+}
+
+.box-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem 10rem;
+  border: dashed 2px #4d4d4d;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+i {
+  font-size: 3rem;
+  color: #8d9be0;
+}
+
+p {
+  font-size: 0.9rem;
+  color: #bfbfbf;
+  font-weight: 600;
+  margin-top: -1rem;
+  text-align: center;
+}
+
+span {
+  color: #8d9be0;
+}
+
+button {
+  padding: .7rem;
+  margin: 0.8rem 0rem;
+  flex: 1;
+  font-size: 1.2rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  outline: none;
+  border-width: 0;
+}
+
+button#predict {
+  background-color: #8d9be0;
+  color: white;
+}
+
+button:hover, a:hover {
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.32);
+  -webkit-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.32);
+  -moz-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.32);
+}
+
+.box-footer {
+  display: flex;
+  justify-content: space-around;
+  gap: 0.1rem;
+  margin-top: 1rem;
+}
+.box-result {
+  display: flex;
+  flex-direction: column;
+}
+.box-result h4 {
+  margin-top: -0.3rem;
+}
+
+#image {
+  visibility: hidden;
+}
+#image_show {
+  display: none;
+  max-width: 100%;
+  max-height: 50vh;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+#image_result {
+  display: block;
+  max-width: 100%;
+  max-height: 50vh;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+a {
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  background-color: #e0e0e0;
+  padding: .7rem;
+  margin: 0.8rem 0rem;
+  flex: 1;
+  font-size: 1.2rem;
+  border-radius: 0.3rem;
+  font-family: 'Poppins', sans-serif;
+}
+/* Mobile screen */
+@media only screen and (max-width: 768px) {
+  .box-container {
+    padding: 2rem;
+  }
+
+  .box-footer {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+    margin: 0.5rem 0rem;
+
+  }
+}

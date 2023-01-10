@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pneumonia Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <script
+      src="https://kit.fontawesome.com/b011055500.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <form method="post" id="form" enctype="multipart/form-data">
+        <input type="file" name="image" id="image" />
+        <div class="file-container">
+          {% if result and filename %}
+            <div class="box-container" id="box-container">
+              <img src="{{ url_for('display_image', filename=filename) }}" id="image_result" alt="img" srcset="">
+            </div>
+            <div class="box-result">
+              <a href="/">Back</a>
+              <h4>Result: <span>{{ result }}</span></h4>
+            </div>
+          {% else %}
+            <div class="box-container" id="box-container">
+              <i class="fas fa-upload upload-content" id="upload"></i>
+              <h3 class="upload-content">Drop your image here, or <span>browse</span></h3>
+              <p class="upload-content">Supports: JPG, JPEG and PNG</p>
+              <img id="image_show" src="" alt="Image">
+            </div>
+            <div class="box-footer">
+              <button type="reset" id="cancel">Cancel</button>
+              <button type="button" id="predict">Predict</button>
+            </div>
+          {% endif %}
+        </div>
+      </form>
+    </div>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+  </body>
+</html>
